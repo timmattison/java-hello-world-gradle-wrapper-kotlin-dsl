@@ -10,6 +10,10 @@ File an issue and I'll try to fix it.
 
 Want to try out this application with a custom built runtime from JLink inside of a Docker container? Check out the [docker](docker) directory.
 
+## Docker container with native image
+
+Want to try out this application running as a native image inside of a Docker container? Check out the [docker-native-image](docker-native-image) directory.
+
 ## Tasks
 
 These are the tasks that most people will want to know about:

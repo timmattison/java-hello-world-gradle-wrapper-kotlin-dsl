@@ -1,12 +1,12 @@
 # Minimal application in a Docker container
 
-This is a minimal Java Hello World application that runs in a Docker container. It uses a build
+This is a minimal Java Hello World application that runs in a Docker container as a native image.
 container based on the latest OpenJDK Docker image from Dockerhub. This build container builds
 the uber JAR and the custom runtime with JLink.
 
 After the build container is built it creates a runner container. The runner container is a
-minimal Debian container that contains the uber JAR and the custom runtime. The entry point for
-the runner container immediately starts the uber JAR.
+minimal Debian container that contains the native image. The entry point for the runner
+container immediately starts the native image.
 
 # Thanks to David Delabassee
 
@@ -17,8 +17,8 @@ I learned how to do this from [David Delabassee's "Java into Containers, A Match
 To build and run the application do this:
 
 ```
-docker build -t hello-world-docker .
-docker run -it --rm hello-world-docker
+docker build -t hello-world-docker-native-image .
+docker run -it --rm hello-world-docker-native-image
 ```
 
 You should see this output:
